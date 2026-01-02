@@ -4,224 +4,199 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+
+    <!-- Phosphor Icons - Regular & Fill weights -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/fill/style.css"
+    />
+
     <title>Clinic Patient Portal</title>
   </head>
   <body>
-    <section class="dashboard">
-      <!-- Dashboard Header -->
-      <div class="header">
-        <!-- Dashboard has 2 children (This is the left child) -->
-        <div class="header-left">
-          <div class="logo">
-            <img src="./Images/mark.svg" alt="logo" />
-          </div>
-          <div class="icon-txt">
-            <div class="icons">
-              <div class="red"><i class="fa-solid fa-table-columns"></i></div>
-              <div class="normal">
-                <i class="fa-solid fa-chevron-right"></i>
+    <header class="head">
+      <div class="logo-bread">
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="ph ph-list"></i>
+        </button>
+        <div class="logo">
+          <img src="./Images/logo (2).svg" alt="logo" />
+        </div>
+        <div class="breadcrumb">
+          <i class="ph ph-diamonds-four"></i>
+          <p>Dashboard</p>
+        </div>
+      </div>
+      <div class="profile-noti">
+        <div class="noti-icns">
+          <i class="ph ph-bell-simple"></i>
+        </div>
+        <div class="profile" id="profile">
+          <img src="./Images/Profile 5.avif" alt="profile pic" />
+        </div>
+        <div class="profile-name">
+          <p>Amanda Jules</p>
+          <p class="id">Patient</p>
+        </div>
+      </div>
+    </header>
+    <aside class="sidebar" id="sidebar">
+      <button class="sidebar-toggle-btn" id="sidebarToggle">
+        <i class="ph ph-caret-left"></i>
+      </button>
+
+      <nav class="navs">
+        <a href="#" class="nav-link active">
+          <i class="ph ph-squares-four"></i>
+          <span>Home</span>
+        </a>
+        <a href="#" class="nav-link">
+          <i class="ph ph-heart"></i>
+          <span>Favorites</span>
+        </a>
+        <a href="#" class="nav-link">
+          <i class="ph ph-calendar"></i>
+          <span>Appointments</span>
+        </a>
+        <a href="#" class="nav-link">
+          <i class="ph ph-clipboard"></i>
+          <span>Prescriptions</span>
+        </a>
+        <a href="#" class="nav-link">
+          <i class="ph ph-envelope-simple-open"></i>
+          <span>Messages</span>
+        </a>
+        <a href="#" class="nav-link">
+          <i class="ph ph-shopping-bag-open"></i>
+          <span>Store</span>
+        </a>
+        <a href="#" class="nav-link">
+          <i class="ph ph-gear-six"></i>
+          <span>Settings</span>
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <a href="#" class="nav-link sign-off" id="signOffBtn">
+          <i class="ph ph-sign-out"></i>
+          <span>Sign Off</span>
+        </a>
+      </div>
+    </aside>
+
+    <section class="main-section">
+      <div class="main-head">
+        <div class="wlcm-section">
+          <h1>Welcome Amanda</h1>
+          <p>Here's what's happening today.</p>
+        </div>
+        <div class="cards">
+          <!-- Cards will go here -->
+          <div class="card1">
+            <div class="card-top">
+              <div class="card-icn">
+                <i class="ph ph-heartbeat"></i>
+              </div>
+              <div class="desc">
+                <h2>Consultation</h2>
+                <i class="ph ph-caret-right"></i>
               </div>
             </div>
-            <p>Dashboard</p>
-          </div>
-        </div>
-        <!-- This is the right child -->
-        <div class="header-right">
-          <div class="right-icons">
-            <div class="icns">
-              <i class="fa-solid fa-bell"></i>
-            </div>
-            <div class="icns">
-              <i class="fa-solid fa-cart-shopping"></i>
+            <div class="card-bottom">
+              <p class="up">Last Consultation 12.12.2025</p>
+              <p class="dwn">04 All time Consultations</p>
             </div>
           </div>
-          <div class="profile">
-            <div class="profile-img">
-              <img src="./Images/Profile 5.avif" alt="User image" />
+
+          <div class="card2">
+            <div class="card-top">
+              <div class="card-icn">
+                <i class="ph ph-clipboard-text"></i>
+              </div>
+              <div class="desc">
+                <h2>Prescriptions</h2>
+                <i class="ph ph-caret-right"></i>
+              </div>
             </div>
-            <div class="user-name">
-              <h4>Okoye Peter</h4>
-              <p>Patient</p>
+            <div class="card-bottom">
+              <p class="up">Last added 12.10.2025</p>
+              <p class="dwn">1 available to Collect</p>
+            </div>
+          </div>
+
+          <div class="card3">
+            <div class="card-top">
+              <div class="card-icn">
+                <i class="ph ph-test-tube"></i>
+              </div>
+              <div class="desc">
+                <h2>Lab Screenings</h2>
+                <i class="ph ph-caret-right"></i>
+              </div>
+            </div>
+            <div class="card-bottom">
+              <p class="up">4 Lab tests done</p>
+              <p class="dwn">Cancer Screening Test</p>
             </div>
           </div>
         </div>
       </div>
-      <div class="main">
-        <!-- Sidebar Section -->
-        <div class="sidebar">
-          <a href="#">
-            <div class="side-icns">
-              <i class="fa-solid fa-table-columns"></i>
-            </div>
-          </a>
-          <a href="#">
-            <div class="side-icns">
-              <i class="fa-regular fa-heart"></i>
-            </div>
-          </a>
-          <a href="#">
-            <div class="side-icns">
-              <i class="fa-regular fa-calendar"></i>
-            </div>
-          </a>
-          <a href="#">
-            <div class="side-icns">
-              <i class="fa-regular fa-clipboard"></i>
-            </div>
-          </a>
-          <a href="#">
-            <div class="side-icns">
-              <i class="fa-regular fa-comments"></i>
-            </div>
-          </a>
-          <a href="#">
-            <div class="side-icns">
-              <i class="fa-regular fa-money-bill-1"></i>
-            </div>
-          </a>
-          <a href="#">
-            <div class="side-icns">
-              <i class="fa-regular fa-user"></i>
-            </div>
-          </a>
+
+      <div class="aptn-card">
+        <div class="appnt-header">
+          <h2>Upcoming Appointments</h2>
+          <a href="#">See All</a>
         </div>
-        <!-- Main section -->
-        <div class="main-section">
-          <div class="main-right">
-            <div class="top-section">
-              <div class="top-header">
-                <h1>Welcome Mr. Okoye,</h1>
-                <p>You've got no appointment for today.</p>
+        <div class="appnt-details">
+          <div class="aptn-card1">
+            <div class="card-title">
+              <p>Hormone Therapy Consultation</p>
+              <button id="vidcall" class="vidcall">
+                <i class="ph ph-video-camera"></i>Join Video Call
+              </button>
+            </div>
+            <div class="card-info">
+              <div class="dr-img">
+                <img src="./Images/profile 6.avif" alt="Dr. Alonso" />
               </div>
-              <div class="top-cards">
-                <div class="cards1">
-                  <div class="card-top">
-                    <div class="card-icn1">
-                      <i class="fa-regular fa-heart"></i>
-                    </div>
-                    <div class="txt">
-                      <p>Consultations</p>
-                    </div>
-                  </div>
-                  <div class="card-bottom">
-                    <span class="small-p">
-                      <p>Last Consultation 12.02.2023</p></span
-                    >
-                    <p>04 All Time Consultations</p>
-                  </div>
-                </div>
-
-                <div class="cards2">
-                  <div class="card-top">
-                    <div class="card-icn2">
-                      <i class="fa-regular fa-clipboard"></i>
-                    </div>
-                    <div class="txt">
-                      <p>Prescriptions</p>
-                    </div>
-                  </div>
-                  <div class="card-bottom">
-                    <span class="small-p"><p>Last Added 12.02.2023</p></span>
-                    <p>01 Available Prescriptions</p>
-                  </div>
-                </div>
-
-                <div class="cards3">
-                  <div class="card-top">
-                    <div class="card-icn3">
-                      <i class="fa-solid fa-vial"></i>
-                    </div>
-                    <div class="txt">
-                      <p>Lab Screenings</p>
-                    </div>
-                  </div>
-                  <div class="card-bottom">
-                    <span class="small-p"> <p>04 Screening Tests</p></span>
-                    <p>Cancer Screening Test</p>
-                  </div>
-                </div>
+              <div class="dr-details">
+                <p>Dr. Alonso</p>
+                <p>Monday, 15th Dec 2025 at 10:00 AM</p>
               </div>
             </div>
+          </div>
 
-            <div class="buttom-section">
-              <div class="appointment-card">
-                <div class="card-header">
-                  <h3>Upcoming Appointments</h3>
-                  <p>View all</p>
-                </div>
-                <div class="content">
-                  <div class="card-contents1">
-                    <div class="content-head">
-                      <div class="card-title">
-                        <p>Hormone Therapy Consultation</p>
-                      </div>
-                      <div class="card-btn">
-                        <button>
-                          <i class="fa-solid fa-video"></i>
-                          Join Session
-                        </button>
-                      </div>
-                    </div>
-                    <div class="content-body">
-                      <div class="doc-name">
-                        <div class="doc-img">
-                          <img
-                            src="./Images/profile 6.avif"
-                            alt="Dr. Ahmed Musa"
-                          />
-                        </div>
-                        <div class="doc-name">
-                          <p>Dr. Ahmed Musa</p>
-                        </div>
-                      </div>
-                      <div class="date-time">
-                        <p>05 Feb, 2025</p>
-                        <p>11:00am - 11:30am</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="card-contents">
-                    <div class="content-head">
-                      <div class="card-title">
-                        <p>Anti-Aging Consultation</p>
-                      </div>
-                      <div class="card-btn2">
-                        <button class="btn1">Cancel Appointment</button>
-
-                        <button class="btn2">Reschedule</button>
-                      </div>
-                    </div>
-                    <div class="content-body">
-                      <div class="doc-name">
-                        <div class="doc-img">
-                          <img
-                            src="./Images/profile 6.avif"
-                            alt="Dr. Ahmed Musa"
-                          />
-                        </div>
-                        <div class="doc-name">
-                          <p>Dr. Cristiano Messi</p>
-                        </div>
-                      </div>
-                      <div class="date-time">
-                        <p>05 Feb, 2025</p>
-                        <p>11:00am - 11:30am</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+          <div class="aptn-card2">
+            <div class="card-title">
+              <p>Anti-ageing Consultation</p>
+              <div class="btns">
+                <button id="action-btn" class="action-btn">
+                  Cancel Appointment
+                </button>
+                <button id="action-btn1" class="action-btn1">
+                  Reschedule Appointment
+                </button>
+              </div>
+            </div>
+            <div class="card-info">
+              <div class="dr-img">
+                <img src="./Images/profile 6.avif" alt="Dr. Alonso" />
+              </div>
+              <div class="dr-details">
+                <p>Dr. Alonso</p>
+                <p>Monday, 15th Dec 2025 at 10:00 AM</p>
               </div>
             </div>
           </div>
         </div>
-
-        <!-- Patient Card -->
       </div>
     </section>
+
+    <script src="./script.js"></script>
   </body>
 </html>
